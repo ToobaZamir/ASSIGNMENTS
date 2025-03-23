@@ -27,6 +27,6 @@ if goal:
 
 # Show Motivational Quotes
 st.subheader("Stay Inspired!")
-quotes = ["Believe you can and you're halfway there"."Theodore Roosevelt",
+quotes = ("we love you")
           "It's not about being the best. It's about being better than you were yesterday."]
 st.write(quotes[0])
