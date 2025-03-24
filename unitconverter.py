@@ -30,4 +30,4 @@ def app():
             st.write(f"{value}centimeters is equal to{result}{to_Unit}")
         else:
             st.write("Please enter a valid value greater than 0.")
-st.write(quotes[0])
+st.write(value[0])
