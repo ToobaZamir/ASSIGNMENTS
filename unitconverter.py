@@ -27,6 +27,6 @@ def app():
     if st.button("Convert"):
         if value > 0:
             result = convert_units(value, from_unit, to_unit)
-            st.write(f"{Converted Value}={result},{Unit}")
+            st.write(f"Converted Value:{result}{Unit}")
         else:
             st.write("Please enter a valid value greater than 0.")
