@@ -22,7 +22,8 @@ def app():
     # Select conversion type
     from_unit = "centimeters"  # Fixed as we are always converting from centimeters
     to_unit = st.selectbox("Convert to", ["Inches", "Foot", "Meter"])
-
+if__name__=="__main__":
+    main()
     # Conversion result
     if st.button("Convert"):
         if value > 0:
