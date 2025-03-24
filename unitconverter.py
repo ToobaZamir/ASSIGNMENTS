@@ -17,7 +17,7 @@ def app():
     st.title("Unit Converter")
 
     # Input value
-    value = st.number_input("Enter value in Centimeters", min_value=0, formate=1")
+    value = st.number_input("Enter value in Centimeters", min_value=0, formate=1)
 
     # Select conversion type
     from_unit = "centimeters"  # Fixed as we are always converting from centimeters
