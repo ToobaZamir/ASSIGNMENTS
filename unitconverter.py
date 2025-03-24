@@ -17,7 +17,7 @@ def app():
     st.title("Unit Converter")
 
     # Input value
-    value = st.number_input("Enter value in Centimeters", min_value=0, formate=1)
+    value = st.number_input("Enter number in Centimeters", min_value=0, formate=1)
 
     # Select conversion type
     from_unit = "centimeters"  # Fixed as we are always converting from centimeters
@@ -26,7 +26,7 @@ def app():
     # Conversion result
     if st.button("Convert"):
         if value > 0:
-            result = convert_units(value, from_unit, to_unit)
-            st.write(f"{value}centimeters is equal to{result}{to_Unit}")
+            result = convert_units(number, from_unit, to_unit)
+            st.write(f"{number}centimeters is equal to{result}{to_Unit}")
         else:
             st.write("Please enter a valid value greater than 0.")
