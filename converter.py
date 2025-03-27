@@ -55,7 +55,7 @@ def convert_units(category, value, unit):
 
     elif category == "Time":
         if unit == "Second to Minute":
-            return value / 60
+            return value/60
         elif unit == "Minute to Hour":
             return value / 60
         elif unit == "Minute to Day":
