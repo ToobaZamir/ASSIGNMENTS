@@ -1,9 +1,7 @@
 import streamlit as st
 
 st.title("Unit Converter App")
-'
-
-\st.write("Choose a unit converter that's accurate, easy to use, and covers the units you need.")
+st.write("Choose a unit converter that's accurate, easy to use, and covers the units you need.")
 st.markdown("### Converts Length, Mass And Time ")
 st.write("Welcome! Select a category, enter a value and get the converted result ")
 
