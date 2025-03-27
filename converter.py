@@ -9,9 +9,9 @@ category = st.selectbox("Select a Categoty", ["Length", "Mass", "Time"])
 
 def convert_units(category, value, unit):
     if category == "Length":
-        if unit == "Kilometers to Metre":
+        if unit == "Kilometer to Metre":
             return value * 1000
-        elif unit == "Metre to Kilometers":
+        elif unit == "Metre to Kilometer":
             return value / 0.001
         elif unit == "Metre to Centimetre":
             return value * 100
@@ -35,14 +35,14 @@ def convert_units(category, value, unit):
         elif unit == "Milligram to Microgram":
             return value * 1000
         elif unit == "Microgaram to kilogram":
-            return value  / 1e+9
-        elif unit == "Pounds to kilogram":
+            return value / 1e+9
+        elif unit == "Pound to kilogram":
             return value / 2.205
-        elif unit == "Pounds to Ounce":
+        elif unit == "Pound to Ounce":
             return value * 16
-        elif unit == "Pounds to Milligram":
+        elif unit == "Pound to Milligram":
             return value * 453600
-        elif unit == "Pounds to Stone":
+        elif unit == "Pound to Stone":
             return value / 14
         elif unit == "Ounce to kilogram":
             return value /35.274
@@ -51,11 +51,9 @@ def convert_units(category, value, unit):
         elif unit == "Milligram to kilogram":
             return value / 1e+6
 
-
-
     elif category == "Time":
         if unit == "Second to Minute":
-            return value / 60
+            return value * 60
         elif unit == "Minute to Hour":
             return value / 60
         elif unit == "Minute to Day":
@@ -68,14 +66,13 @@ def convert_units(category, value, unit):
             return value * 168
         elif unit == "Day to Week":
             return value / 7
-
-if category == "Length":
-    unit = st.selectbox("📏 Select Converter", ["Kilometers to Metre","Metre to Kilometers","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inche","Inch to Centimetre"])
-elif category == "Mass":
-    unit = st.selectbox("⚖️ Select Converter", ["Kilograms to Gram", "Miligram to Micrograms","Microgaram to Kilogram","Pounds to Ounce","Pounds to Miligram","Pounds  to Stone","Ounce to Kilogram","Gram to Microgram","Milligram to Kilogram",])
         
+if category == "Length":
+    unit = st.selectbox("📏 Select Converter", ["Kilometer to Metre","Metre to Kilometer","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inche","Inch to Centimetre"])
+elif category == "Mass":
+    unit = st.selectbox("⚖️ Select Converter", ["Kilogram to Gram","Gram to Milligram","Miligram to Microgram","Microgaram to Kilogram","Pound to Kilogram","Pound to Ounce","Pound to Miligram","Pound  to Stone","Ounce to Kilogram","Gram to Microgram","Milligram to Kilogram",])
 elif category == "Time":
-    unit = st.selectbox("⏱️ Select Converter", ["Seconds to minutes", "Minutes to seconds", "Minutes to hours", "Hours to minutes", "Hours to days", "Days to hours"])
+    unit = st.selectbox("⏱️ Select Converter", ["Second to Minute","Minute to Hour","Minute to Day","Hour to Second","Hour to Day","Week to Hour","Day to Week"])
 
 value = st.number_input("Enter The Value To Convert")
 
