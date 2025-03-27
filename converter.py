@@ -1,7 +1,9 @@
 import streamlit as st
 
 st.title("Unit Converter App")
-st.write("Choose a unit converter that's accurate, easy to use, and covers the units you need.")
+'
+
+\st.write("Choose a unit converter that's accurate, easy to use, and covers the units you need.")
 st.markdown("### Converts Length, Mass And Time ")
 st.write("Welcome! Select a category, enter a value and get the converted result ")
 
@@ -32,8 +34,6 @@ def convert_units(category, value, unit):
             return value *1000
         elif unit == "Gram to Milligram":
             return value *1000
-        elif unit == "Milligram to Microgram":
-            return value * 1000
         elif unit == "Pound to kilogram":
             return value / 2.205
         elif unit == "Pound to Ounce":
@@ -66,7 +66,7 @@ def convert_units(category, value, unit):
 if category == "Length":
     unit = st.selectbox("📏 Select Converter", ["Kilometer to Metre","Metre to Kilometer","Metre to Centimetre","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inche","Inch to Centimetre"])
 elif category == "Mass":
-    unit = st.selectbox("⚖️ Select Converter", ["Kilogram to Gram","Gram to Milligram","Miligram to Microgram","Pound to Kilogram","Pound to Ounce","Pound to Miligram","Pound to Stone","Ounce to Kilogram","Gram to Microgram"])
+    unit = st.selectbox("⚖️ Select Converter", ["Kilogram to Gram","Gram to Milligram","Pound to Kilogram","Pound to Ounce","Pound to Miligram","Pound to Stone","Ounce to Kilogram","Gram to Microgram"])
 elif category == "Time":
     unit = st.selectbox("⏱️ Select Converter", ["Second to Minute","Minute to Hour","Minute to Day","Hour to Second","Hour to Day","Week to Hour","Day to Week"])
 
