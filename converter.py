@@ -38,7 +38,7 @@ def convert_units(category, value, unit):
             return value * 453600
         elif unit == "Pound to Stone":
             return value / 14
-        elif unit == "Ounce to kilogram":
+        elif unit == "Ounce to Kilogram":
             return value /35.274
         elif unit == "Gram to Microgram":
             return value * 1e+6
@@ -60,7 +60,7 @@ def convert_units(category, value, unit):
             return value / 7
         
 if category == "Length":
-    unit = st.selectbox("📏 Select Converter", ["Kilometer to Metre","Metre to Kilometer","Metre to Centimetre","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inche","Inch to Centimetre"])
+    unit = st.selectbox("📏 Select Converter", ["Kilometer to Metre","Metre to Kilometer","Metre to Centimetre","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inch","Inch to Centimetre"])
 elif category == "Mass":
     unit = st.selectbox("⚖️ Select Converter", ["Kilogram to Gram","Gram to Milligram","Pound to Ounce","Pound to Milligram","Pound to Stone","Ounce to Kilogram","Gram to Microgram"])
 elif category == "Time":
