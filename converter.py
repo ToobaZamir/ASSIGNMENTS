@@ -81,4 +81,3 @@ value = st.number_input("Enter The Value To Convert")
 
 if st.button("Convert"):
     result = convert_units(category, value, unit)
-    st.success(f"The result is {result:,2f}")
