@@ -55,7 +55,7 @@ def convert_units(category, value, unit):
 
     elif category == "Time":
         if unit == "Second to Minute":
-            return value/60
+            return value / 60
         elif unit == "Minute to Hour":
             return value / 60
         elif unit == "Minute to Day":
@@ -68,8 +68,6 @@ def convert_units(category, value, unit):
             return value * 168
         elif unit == "Day to Week":
             return value / 7
-
-    return 0
         
 if category == "Length":
     unit = st.selectbox("📏 Select Converter", ["Kilometers to Metre","Metre to Kilometers","Centimetre to Milimetre","Inch to Foot","Foot to Mile","Centimetre to Inche","Inch to Centimetre"])
