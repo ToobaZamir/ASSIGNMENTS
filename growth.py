@@ -5,19 +5,27 @@ import streamlit as st
 
 # Home Page
 st.title("Growth Mindset Challenge")
+st.subheader("What is Growth Mindset?")
+
+st.write("""A growth mindset is the belief that your abilities and intelligence can be developed through hard work, perseverance, and learning from your mistakes.
+This mindset encourages you to embrace challenges and stay positive through difficulties.
+""")
 st.write("Welcome! Let's develop a growth mindset through challenges and learning.")
 
-# Growth Mindset Quiz
-st.subheader("Are you in a Growth Mindset?")
+
+
+question =st.subheader("How do you feel about challenges?")
 question = st.radio(
-    "How do you feel about challenges?",
-    ("I avoid challenges", "I embrace challenges and learn from them")
+    "select",
+    ("I tend to avoid challenges because they feel uncomfortable","I see challenges  as opportunities to learn and grow")
 )
 
-if question == "I embrace challenges and learn from them":
+if question == ("I see challenges  as opportunities to learn and grow"):
+
+
     st.success("Great! You're on the right track.")
 else:
-    st.warning("Don't worry! Challenges help you grow.")
+    st.warning("Don't worry! Challenges help you grow keep going")
 
 # Set Learning Goals
 st.subheader("Set Your Learning Goals")
@@ -27,5 +35,6 @@ if goal:
 
 # Show Motivational Quotes
 st.subheader("Stay Inspired!")
-quotes = ("we love you It's not about being the best. It's about being better than you were yesterday.")
+quotes : str= ["life is like  riding a bicycle. To keep your balance,you must keep moving---Albert Einstein"]
+        #   "It's not about being the best. It's about being better than you were yesterday."]
 st.write(quotes[0])
