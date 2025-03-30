@@ -57,7 +57,7 @@ def add_multiple_books_ui():
         book["read_status"] = st.checkbox(f"Read {idx+1}", value=book["read_status"], key=f"read_{idx}")
 
     # Submit all books at once
-    if st.button("✅ Add All Books"):
+    if st.button("✅  All Books"):
         if all(book["title"] and book["author"] and book["year"] and book["genre"] for book in st.session_state.new_books):
             message = manager.add_books(st.session_state.new_books)
             st.success(message)
