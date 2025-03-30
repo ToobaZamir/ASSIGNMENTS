@@ -41,10 +41,10 @@ manager = PersonalLibraryManager()
 
 def add_multiple_books_ui():
     """UI for adding multiple books."""
-    st.subheader("➕ Add Multiple Books")
+    st.subheader("➕ Add Books")
 
     # Add a new book input row
-    if st.button("➕ Add Another Book"):
+    if st.button("➕ Add Book"):
         st.session_state.new_books.append({"title": "", "author": "", "year": 0, "genre": "", "read_status": False})
 
     # Display dynamic book input fields
@@ -57,7 +57,7 @@ def add_multiple_books_ui():
         book["read_status"] = st.checkbox(f"Read {idx+1}", value=book["read_status"], key=f"read_{idx}")
 
     # Submit all books at once
-    if st.button("✅  All Books"):
+    if st.button("✅  Add All Books"):
         if all(book["title"] and book["author"] and book["year"] and book["genre"] for book in st.session_state.new_books):
             message = manager.add_books(st.session_state.new_books)
             st.success(message)
